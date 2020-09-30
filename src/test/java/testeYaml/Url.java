@@ -1,3 +1,4 @@
+package testeYaml;
 public class Url {
     private String baseUrl;
 
