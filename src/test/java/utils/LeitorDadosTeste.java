@@ -13,7 +13,7 @@ public class LeitorDadosTeste {
 	public static JSONParser parser = new JSONParser();
 	public static JSONObject jsonObject;
 	public static JSONArray jsonArray;
-	
+
 	public void getJsonUnico() {
 		try {
 			jsonObject = lerJson();
@@ -21,11 +21,11 @@ public class LeitorDadosTeste {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public void getJsonMultiplos() {
 		try {
 			jsonArray = lerJsonMultiplos();
-			jsonObject = (JSONObject) jsonArray.get(0);
+			jsonObject = (JSONObject) jsonArray.get(2);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -39,12 +39,10 @@ public class LeitorDadosTeste {
 	 * @throws org.json.simple.parser.ParseException
 	 * @throws FileNotFoundException
 	 */
-	public static JSONObject lerJson()
-			throws Exception {
+	public static JSONObject lerJson() throws Exception {
 		return (JSONObject) parser.parse(new FileReader("./resources/dadosTestes.json"));
 	}
-	
-	
+
 	/**
 	 * Metodo para LerJson Multiplos
 	 * 
@@ -53,8 +51,7 @@ public class LeitorDadosTeste {
 	 * @throws org.json.simple.parser.ParseException
 	 * @throws FileNotFoundException
 	 */
-	public static JSONArray lerJsonMultiplos()
-			throws Exception {
+	public static JSONArray lerJsonMultiplos() throws Exception {
 		return (JSONArray) parser.parse(new FileReader("./resources/dadosTestesArray.json"));
 	}
 
@@ -69,4 +66,7 @@ public class LeitorDadosTeste {
 		return (String) jsonObject.get(chave);
 	}
 
+	public void setData() {
+		jsonObject.replace("DescricaoProduto2", "TesteJson");
+	}
 }

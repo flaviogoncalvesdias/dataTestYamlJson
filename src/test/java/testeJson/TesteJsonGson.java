@@ -10,12 +10,14 @@ public class TesteJsonGson {
 		
 		LeitorDadosTeste leitorDados = new LeitorDadosTeste();
 		
-		leitorDados.getJsonUnico();
+		leitorDados.getJsonMultiplos();
 		
 		Gson gson = new Gson();
 		DataTestJson dataTestJson =  gson.fromJson(leitorDados.jsonObject.toString(), DataTestJson.class);
 		
-		System.out.println(dataTestJson.getEmail());
+		System.out.println(dataTestJson.getUrl());
+		
+		leitorDados.setData();
 
 	}
 
