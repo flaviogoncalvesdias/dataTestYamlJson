@@ -14,7 +14,6 @@ public class YamlTest {
         }catch (Exception ex){
             ex.printStackTrace();
         }
-
         System.out.println("Url buscada: "+url.getUrl());
     }
 }

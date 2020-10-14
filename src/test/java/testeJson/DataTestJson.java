@@ -59,5 +59,12 @@ public class DataTestJson {
 	public void setProduto2(String produto2) {
 		this.produto2 = produto2;
 	}
+	
+	@Override
+	public String toString() {
+		return "URL: "+url + "Email: "+email+"Senha: "+senha+ "Produto1: "+ produto1+"Descrção Produto1"+ 
+	descricaoProduto1+"Produto2: "+ produto2+"Descrição: "+descricaoProduto2;
+		
+	}
 
 }
