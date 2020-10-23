@@ -7,12 +7,22 @@ import java.util.Properties;
 
 public class PropertiesReader {
 	
+	public static void main(String[] args) throws IOException {
+		PropertiesReader propertiesReader = new PropertiesReader();
+		
+		propertiesReader.getProp();
+	}
+	
 	public Properties getProp() throws IOException {
         Properties props = new Properties();
         FileInputStream file = new FileInputStream(
-                "./src/test/resources/config.properties");
+                "resources/config.properties");
         props.load(file);
+        
+        System.out.println(props.get("prop.dados"));
         return props;
+        
+        
  
     }
 

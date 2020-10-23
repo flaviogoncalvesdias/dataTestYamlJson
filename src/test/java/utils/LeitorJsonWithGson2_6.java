@@ -25,7 +25,6 @@ public class LeitorJsonWithGson2_6 {
 
 	    // create a reader
 	    Reader reader = new FileReader("./resources/dadosTestes.json");
-
 	    // convert JSON file to map
 	    Map<String, String> map = gson.fromJson(reader, Map.class);
 
